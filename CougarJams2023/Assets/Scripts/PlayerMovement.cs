@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isGrounded;
 
+    [HideInInspector] public Vector2 facing;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +33,10 @@ public class PlayerMovement : MonoBehaviour
         if (horizontalMovement > 0) 
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
+            facing = Vector2.right;
         } else if (horizontalMovement < 0) {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
+            facing = Vector2.left;
         } else {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
