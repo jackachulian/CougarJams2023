@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
+    [SerializeField] private float forwardsSpeed = 7f;
+
+    [SerializeField] private float backwardsSpeed = 3.5f;
 
     [SerializeField] private float jumpSpeed = 5f;
 
@@ -32,11 +34,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (horizontalMovement > 0) 
         {
-            rb.velocity = new Vector2(speed, rb.velocity.y);
+            rb.velocity = new Vector2(forwardsSpeed, rb.velocity.y);
             facing = Vector2.right;
         } else if (horizontalMovement < 0) {
-            rb.velocity = new Vector2(-speed, rb.velocity.y);
-            facing = Vector2.left;
+            rb.velocity = new Vector2(-backwardsSpeed, rb.velocity.y);
+            // uncomment below to face backwards, disabled it cause doesnt fit well in sidescroller
+            // facing = Vector2.left; 
         } else {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
