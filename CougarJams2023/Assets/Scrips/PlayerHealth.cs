@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
     public int health;
     public int maxHealth = 3;
+    public int sanity;
 
     // Start is called before the first frame update
     void Start()
@@ -13,17 +15,13 @@ public class PlayerHealth : MonoBehaviour
         health = maxHealth;
     }
 
-    public void TakeDamage (int amount)
+    public void TakeDamage(int amount)
     {
         health -= amount;
-        if(health <= 0)
+        if (health <= 0)
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene("ScrollingLevel");
+            sanity++;
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
