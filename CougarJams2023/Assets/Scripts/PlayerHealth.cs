@@ -21,6 +21,7 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             SceneManager.LoadScene("ScrollingLevel");
+            // TODO: Strengthen Player
             sanity++;
         }
     }

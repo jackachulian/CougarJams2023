@@ -10,7 +10,7 @@ public class HealthDisplay : MonoBehaviour
 
     public Sprite emptyHeart;
     public Sprite fullHeart;
-    public Image[] hearts;
+    public GameObject[] hearts;
 
     public PlayerHealth playerHealth;
 
@@ -29,20 +29,20 @@ public class HealthDisplay : MonoBehaviour
         {
             if (i < health)
             {
-                hearts[i].sprite = fullHeart;
+                hearts[i].GetComponent<Image>().sprite = fullHeart;
             }
             else
             {
-                hearts[i].sprite = emptyHeart;
+                hearts[i].GetComponent<Image>().sprite = emptyHeart;
             }
 
             if (i < maxHealth)
             {
-                hearts[i].enabled = true;
+                hearts[i].GetComponent<Image>().enabled = true;
             }
             else
             {
-                hearts[i].enabled = false;
+                hearts[i].GetComponent<Image>().enabled = false;
             }
         }
     }
