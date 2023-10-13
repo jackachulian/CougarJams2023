@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isGrounded;
 
-    [HideInInspector] public Vector2 facing;
+    [HideInInspector] public Vector2 facing = Vector2.right;
 
     // Start is called before the first frame update
     void Start()
