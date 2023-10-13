@@ -10,6 +10,8 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] private float projectileSpeed = 10f;
 
+    [SerializeField] private float projectileDestroyTime = 1f;
+
     [SerializeField] private Transform projectileSpawnPoint;
 
 
@@ -30,10 +32,13 @@ public class PlayerAttack : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && currentAttackCooldown <= 0) {
             currentAttackCooldown = attackCooldown;
             
-            GameObject proj = Instantiate(basicProjectilePrefab, projectileSpawnPoint.position, Quaternion.identity);
-            Rigidbody2D projRb = proj.GetComponent<Rigidbody2D>();
+            GameObject projObj = Instantiate(basicProjectilePrefab, projectileSpawnPoint.position, Quaternion.identity);
+            Rigidbody2D projRb = projObj.GetComponent<Rigidbody2D>();
             projRb.position = projectileSpawnPoint.position;
             projRb.velocity = playerMovement.facing * projectileSpeed;
+
+            Projectile proj = projObj.GetComponent<Projectile>();
+            proj.SetDestroyTime(projectileDestroyTime);
         }
     }
 }
