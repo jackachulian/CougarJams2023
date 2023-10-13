@@ -8,12 +8,16 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float jumpSpeed = 5f;
 
+    [SerializeField] private Transform groundCheck;
+
     [SerializeField] private LayerMask groundLayerMask;
 
     private Rigidbody2D rb;
 
 
     private bool isGrounded;
+
+    [HideInInspector] public Vector2 facing;
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +33,10 @@ public class PlayerMovement : MonoBehaviour
         if (horizontalMovement > 0) 
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
+            facing = Vector2.right;
         } else if (horizontalMovement < 0) {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
+            facing = Vector2.left;
         } else {
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
@@ -44,23 +50,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // after calculations, set to false, will be set by collisions if true
-        isGrounded = false;
-    }
-
-    private void OnCollisionEnter2D(Collision2D col) {
-        HandleCollision(col);
-    }
-
-    private void OnCollisionStay2D(Collision2D col) {
-        // will be set to true if in contact with any ground colliders
-        HandleCollision(col);
-    }
-
-    void HandleCollision(Collision2D col) {
-        // Will be true if collision's layer is contained in the ground layer mask on this obj
-		if((groundLayerMask & (1 << col.gameObject.layer)) != 0)
-		{
-			isGrounded = true;
-        }
+        RaycastHit2D hit = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.2f, groundLayerMask);
+        isGrounded = hit.collider != null;
     }
 }
