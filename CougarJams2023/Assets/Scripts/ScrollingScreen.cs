@@ -9,6 +9,8 @@ public class ScrollingScreen : MonoBehaviour {
     void Start() {
         Time.timeScale = 1;
         rightEdge = gameObject;
+
+        if (!player) player = GameObject.Find("Player");
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
