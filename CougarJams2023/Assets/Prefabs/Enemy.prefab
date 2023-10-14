@@ -157,8 +157,6 @@ GameObject:
   - component: {fileID: 729690225750311924}
   - component: {fileID: 7029943024689505513}
   - component: {fileID: 4999896447635956966}
-  - component: {fileID: 6526511368079391061}
-  - component: {fileID: 2627179111621912341}
   - component: {fileID: 4681500573538082751}
   - component: {fileID: 6227653409542687439}
   - component: {fileID: 5498238765363723927}
@@ -227,32 +225,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
---- !u!114 &6526511368079391061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5293938848683763868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72e8e64a0cfd3364883d8643eb7b7cb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
---- !u!114 &2627179111621912341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5293938848683763868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72e8e64a0cfd3364883d8643eb7b7cb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
 --- !u!70 &4681500573538082751
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
