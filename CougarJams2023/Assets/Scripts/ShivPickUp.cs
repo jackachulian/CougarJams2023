@@ -6,6 +6,10 @@ public class ShivPickUp : MonoBehaviour
 {
     public PlayerAttack playerAttack;
 
+    private void Start() {
+        if (!playerAttack) playerAttack = FindFirstObjectByType<PlayerAttack>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Player")
@@ -18,5 +22,6 @@ public class ShivPickUp : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(0.5f);
         playerAttack.enabled = true;
+        gameObject.SetActive(false);
     }
 }
