@@ -10,9 +10,6 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] private float projectileSpeed = 10f;
 
-    [SerializeField] private float projectileDestroyTime = 100f;
-
-
     [SerializeField] private Transform projectileSpawnPoint;
 
 
