@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &40808717 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7311480261647695759, guid: 8a363448ebd41ab4ab9ec1848a8fc53b, type: 3}
+  m_PrefabInstance: {fileID: 604013737}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &52180993
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -893,6 +898,10 @@ PrefabInstance:
       propertyPath: backwardsSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 120110711214868915, guid: 8a363448ebd41ab4ab9ec1848a8fc53b, type: 3}
+      propertyPath: scrollingScreen
+      value: 
+      objectReference: {fileID: 1306168011}
     - target: {fileID: 1566047235555258489, guid: 8a363448ebd41ab4ab9ec1848a8fc53b, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.81
@@ -1248,7 +1257,7 @@ Transform:
   m_GameObject: {fileID: 881232378}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.38, y: 20, z: 0}
+  m_LocalPosition: {x: 17.48, y: 20, z: 0}
   m_LocalScale: {x: 10, y: 50, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2092,7 +2101,6 @@ GameObject:
   - component: {fileID: 1306168013}
   - component: {fileID: 1306168012}
   - component: {fileID: 1306168011}
-  - component: {fileID: 1306168010}
   m_Layer: 0
   m_Name: RightEdge
   m_TagString: Untagged
@@ -2100,19 +2108,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1306168010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306168009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6088b46389e2b046912c67055b6d25d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameOver: {fileID: 391017464}
 --- !u!114 &1306168011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2125,8 +2120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2c3b70fe6fb401448ddf4ff4aacb8e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFlipped: 1
   scrollManager: {fileID: 2011459790}
-  player: {fileID: 0}
+  player: {fileID: 40808717}
 --- !u!61 &1306168012
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2181,7 +2177,7 @@ Transform:
   m_GameObject: {fileID: 1306168009}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.48, y: 20, z: 0}
+  m_LocalPosition: {x: -9.38, y: 20, z: 0}
   m_LocalScale: {x: 4.1, y: 50, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3331,6 +3327,7 @@ MonoBehaviour:
   cameraOgj: {fileID: 1555394832}
   leftEdge: {fileID: 881232378}
   rightEdge: {fileID: 1306168009}
+  scrollingScreen: {fileID: 1306168011}
 --- !u!81 &2011459791
 AudioListener:
   m_ObjectHideFlags: 0

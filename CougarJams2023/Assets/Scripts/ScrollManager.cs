@@ -11,13 +11,24 @@ public class ScrollManager : MonoBehaviour
     [SerializeField] private GameObject leftEdge;
     [SerializeField] private GameObject rightEdge;
 
+    public ScrollingScreen scrollingScreen;
+
     private void Update()
     {
         if(isScrolling)
         {
-            cameraOgj.transform.position = cameraOgj.transform.position + Vector3.right * scrollSpeed * Time.deltaTime;
-            leftEdge.transform.position = leftEdge.transform.position + Vector3.right * scrollSpeed * Time.deltaTime;
-            rightEdge.transform.position = rightEdge.transform.position + Vector3.right * scrollSpeed * Time.deltaTime;
+            if (!scrollingScreen.isFlipped)
+            {
+                cameraOgj.transform.position = cameraOgj.transform.position + Vector3.right * scrollSpeed * Time.deltaTime;
+                leftEdge.transform.position = leftEdge.transform.position + Vector3.right * scrollSpeed * Time.deltaTime;
+                rightEdge.transform.position = rightEdge.transform.position + Vector3.right * scrollSpeed * Time.deltaTime;
+            } else
+            {
+                cameraOgj.transform.position = cameraOgj.transform.position + Vector3.left * scrollSpeed * Time.deltaTime;
+                leftEdge.transform.position = leftEdge.transform.position + Vector3.left * scrollSpeed * Time.deltaTime;
+                rightEdge.transform.position = rightEdge.transform.position + Vector3.left * scrollSpeed * Time.deltaTime;
+            }
+            
         }
     }
 }
