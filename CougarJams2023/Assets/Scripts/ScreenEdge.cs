@@ -7,7 +7,11 @@ public class ScreenEdge : MonoBehaviour {
 
     private void Awake()
     {
-        GameOver = GameObject.Find("GameOver");
+        ScrollingScreen begin = FindFirstObjectByType<ScrollingScreen>();
+        if (!begin) 
+        {
+            GameOver = GameObject.Find("GameOver");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

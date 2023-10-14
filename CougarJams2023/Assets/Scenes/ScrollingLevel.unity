@@ -394,6 +394,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 729690225750311924, guid: 01239b8fd748ae949ad3cd092921e506, type: 3}
+      propertyPath: hp
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5293938848683763868, guid: 01239b8fd748ae949ad3cd092921e506, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -760,6 +764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 2
+  begin: 1
 --- !u!1 &553818669
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,6 +804,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 729690225750311924, guid: 01239b8fd748ae949ad3cd092921e506, type: 3}
+      propertyPath: hp
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5293938848683763868, guid: 01239b8fd748ae949ad3cd092921e506, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -1129,6 +1138,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 729690225750311924, guid: 01239b8fd748ae949ad3cd092921e506, type: 3}
+      propertyPath: hp
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5293938848683763868, guid: 01239b8fd748ae949ad3cd092921e506, type: 3}
       propertyPath: m_Name
       value: Enemy (2)
