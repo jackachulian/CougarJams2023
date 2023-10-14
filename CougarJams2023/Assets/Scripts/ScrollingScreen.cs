@@ -4,7 +4,7 @@ public class ScrollingScreen : MonoBehaviour {
     [SerializeField] public float scrollSpeed = 2f;
 
     void Start() {
-        
+        Time.timeScale = 1;
     }
 
     void Update() {
