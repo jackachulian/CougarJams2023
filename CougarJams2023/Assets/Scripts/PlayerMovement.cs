@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float backwardsSpeed = 3.5f;
 
-    [SerializeField] private float jumpSpeed = 5f;
+    [SerializeField] private float jumpSpeed = 100f;
 
     [SerializeField] private Transform groundCheck;
 
