@@ -717,6 +717,7 @@ MonoBehaviour:
   cameraOgj: {fileID: 637894741}
   leftEdge: {fileID: 1589851457}
   rightEdge: {fileID: 1320632549}
+  scrollingScreen: {fileID: 0}
 --- !u!1 &518681866
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,6 +2161,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8926264825055281837, guid: 8a363448ebd41ab4ab9ec1848a8fc53b, type: 3}
+      propertyPath: projectileSpeed
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3171,14 +3176,6 @@ PrefabInstance:
     - target: {fileID: 2628564049097268490, guid: cb6b22b9ed2c6d941b59aa7935f9a3f1, type: 3}
       propertyPath: m_Name
       value: BasicProjectile
-      objectReference: {fileID: 0}
-    - target: {fileID: 2628564049097268490, guid: cb6b22b9ed2c6d941b59aa7935f9a3f1, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2777594725832444017, guid: cb6b22b9ed2c6d941b59aa7935f9a3f1, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4167543911310915641, guid: cb6b22b9ed2c6d941b59aa7935f9a3f1, type: 3}
       propertyPath: m_LocalPosition.x
