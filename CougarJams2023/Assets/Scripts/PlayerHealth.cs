@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public int health;
-    public int maxHealth = 3;
+    public int maxHealth = 5;
     public int sanity;
 
     // Start is called before the first frame update

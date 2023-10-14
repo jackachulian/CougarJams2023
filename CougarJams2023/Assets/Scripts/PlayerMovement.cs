@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float backwardsSpeed = 3.5f;
 
-    [SerializeField] private float jumpSpeed = 5f;
+    [SerializeField] private float jumpSpeed = 10f;
 
     [SerializeField] private Transform groundCheck;
 
@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        facing = Vector2.right;
     }
 
     // Update is called once per frame
