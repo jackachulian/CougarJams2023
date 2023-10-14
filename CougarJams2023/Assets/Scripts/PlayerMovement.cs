@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        facing = Vector2.right;
     }
 
     // Update is called once per frame

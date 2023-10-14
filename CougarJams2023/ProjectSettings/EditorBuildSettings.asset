@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: d348704acdd5e4949b5f4266e7a5cda8
+  - enabled: 1
+    path: Assets/Scenes/ScrollingLevel.unity
+    guid: c59784350cb2f974f984d82fe839f3b8
   m_configObjects: {}
