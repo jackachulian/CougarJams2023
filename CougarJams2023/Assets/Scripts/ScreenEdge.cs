@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class ScreenEdge : MonoBehaviour {
 
     public GameObject GameOver;
-    public bool door;
 
     private void Awake()
     {
