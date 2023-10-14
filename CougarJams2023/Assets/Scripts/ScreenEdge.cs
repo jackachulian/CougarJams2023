@@ -7,11 +7,8 @@ public class ScreenEdge : MonoBehaviour {
 
     private void Awake()
     {
-        ScrollingScreen begin = FindFirstObjectByType<ScrollingScreen>();
-        if (!begin) 
-        {
-            GameOver = GameObject.Find("GameOver");
-        }
+        GameOver = GameObject.Find("GameOver");
+        //print(GameOver.name + " is now found.");
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -24,6 +21,9 @@ public class ScreenEdge : MonoBehaviour {
             StartCoroutine(HealthTimer(health));
             GameOver.SetActive(true);
         }
+        Time.timeScale = 0;
+        StartCoroutine(HealthTimer(health));
+        GameOver.GetComponent<Canvas>().enabled = true;
     }
     private IEnumerator HealthTimer(PlayerHealth health)
     {
@@ -33,6 +33,4 @@ public class ScreenEdge : MonoBehaviour {
             health.health -= 1;
         }
     }
-
-
 }
