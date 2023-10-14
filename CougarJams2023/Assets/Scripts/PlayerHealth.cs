@@ -39,6 +39,7 @@ public class PlayerHealth : MonoBehaviour
         if (health <= 0)
         {
             Time.timeScale = 0;
+            if (!GameOver) GameOver = GameObject.Find("GameOver");
             GameOver.SetActive(true);
             // TODO: Strengthen Player
             sanity++;
