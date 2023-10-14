@@ -12,6 +12,10 @@ public class ScrollingScreen : MonoBehaviour {
 
         if (!player) player = GameObject.Find("Player");
     }
+    void Update()
+    {
+        transform.position = transform.position + Vector3.right * 2 * Time.deltaTime;
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other == player.GetComponent<Collider2D>())
