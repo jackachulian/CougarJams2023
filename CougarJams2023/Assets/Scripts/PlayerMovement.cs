@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float horizontalMovement = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("horizontalInput", horizontalMovement);
 
         if (horizontalMovement > 0) 
         {
@@ -44,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(-backwardsSpeed, rb.velocity.y);
             // uncomment below to face backwards, disabled it cause doesnt fit well in sidescroller
             // facing = Vector2.left; 
-            animator.SetBool("running", false);
+            animator.SetBool("running", true);
         } else {
             rb.velocity = new Vector2(0, rb.velocity.y);
             facing = Vector2.right;
