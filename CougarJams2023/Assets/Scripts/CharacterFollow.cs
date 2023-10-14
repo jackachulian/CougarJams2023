@@ -8,7 +8,6 @@ public class CharacterFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = player.transform.position + new Vector3(0, -2, 0);
-        //Comment
+        transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
     }
 }
