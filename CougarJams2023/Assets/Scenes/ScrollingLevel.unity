@@ -1893,6 +1893,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameOver
       objectReference: {fileID: 0}
+    - target: {fileID: 2052235564742708998, guid: 29a9e3538e506cc4cbf24159336df4a4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3425805940810444853, guid: 29a9e3538e506cc4cbf24159336df4a4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3425805940810444853, guid: 29a9e3538e506cc4cbf24159336df4a4, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3425805940810444853, guid: 29a9e3538e506cc4cbf24159336df4a4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 3425805940810444853, guid: 29a9e3538e506cc4cbf24159336df4a4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
     - target: {fileID: 4239644785683322917, guid: 29a9e3538e506cc4cbf24159336df4a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1972,6 +1992,22 @@ PrefabInstance:
     - target: {fileID: 4239644785683322917, guid: 29a9e3538e506cc4cbf24159336df4a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995760576658880651, guid: 29a9e3538e506cc4cbf24159336df4a4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995760576658880651, guid: 29a9e3538e506cc4cbf24159336df4a4, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995760576658880651, guid: 29a9e3538e506cc4cbf24159336df4a4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4995760576658880651, guid: 29a9e3538e506cc4cbf24159336df4a4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
