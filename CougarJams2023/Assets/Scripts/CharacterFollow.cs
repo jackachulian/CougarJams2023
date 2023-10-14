@@ -9,5 +9,6 @@ public class CharacterFollow : MonoBehaviour
     void Update()
     {
         transform.position = player.transform.position + new Vector3(0, -2, 0);
+        //Comment
     }
 }
