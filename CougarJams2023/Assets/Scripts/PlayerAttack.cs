@@ -10,8 +10,6 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] private float projectileSpeed = 10f;
 
-    [SerializeField] private float projectileDestroyTime = 1f;
-
     [SerializeField] private Transform projectileSpawnPoint;
 
 
@@ -38,7 +36,6 @@ public class PlayerAttack : MonoBehaviour
             projRb.velocity = playerMovement.facing * projectileSpeed;
 
             Projectile proj = projObj.GetComponent<Projectile>();
-            proj.SetDestroyTime(projectileDestroyTime);
         }
     }
 }

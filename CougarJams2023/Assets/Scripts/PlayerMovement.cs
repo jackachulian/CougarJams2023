@@ -42,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
             // facing = Vector2.left; 
         } else {
             rb.velocity = new Vector2(0, rb.velocity.y);
+            facing = Vector2.right;
         }
 
 

@@ -3,7 +3,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour {
     [SerializeField] private int damage = 1;
 
-    [SerializeField] private float destroyTime = 999f;
+    [SerializeField] private float destroyTime = 100f;
 
     private void Update() {
         destroyTime -= Time.deltaTime;
