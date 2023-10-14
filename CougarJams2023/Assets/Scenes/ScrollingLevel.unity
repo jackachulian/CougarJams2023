@@ -428,7 +428,7 @@ Transform:
   m_GameObject: {fileID: 499909838}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7, y: 0.2, z: 0}
+  m_LocalPosition: {x: 0.61, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -517,7 +517,7 @@ Transform:
   m_GameObject: {fileID: 553818669}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: -0.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1906,7 +1906,7 @@ Transform:
   m_GameObject: {fileID: 1361927978}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -367, y: -172.33, z: 0}
+  m_LocalPosition: {x: -455.3, y: -253.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2032,12 +2032,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forwardsSpeed: 7
   backwardsSpeed: 3.5
-  jumpSpeed: 10
+  jumpSpeed: 11
   groundCheck: {fileID: 553818670}
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 8
-  facing: {x: 0, y: 0}
+  facing: {x: 1, y: 0}
 --- !u!114 &1361927984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2317,7 +2317,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1589851458
 Transform:
   m_ObjectHideFlags: 0
