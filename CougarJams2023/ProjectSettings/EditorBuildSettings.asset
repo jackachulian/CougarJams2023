@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScrollingLevel.unity
     guid: c59784350cb2f974f984d82fe839f3b8
+  - enabled: 1
+    path: Assets/Scenes/Tutorial1.unity
+    guid: ac23e60a6180a4d49804a74b93e44130
   m_configObjects: {}

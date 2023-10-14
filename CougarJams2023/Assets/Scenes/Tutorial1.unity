@@ -368,6 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOver: {fileID: 0}
+  door: 0
 --- !u!61 &284727817
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2623,6 +2624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOver: {fileID: 0}
+  door: 1
 --- !u!61 &1320632552
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3532,6 +3534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameOver: {fileID: 893219193}
+  door: 0
 --- !u!1 &1634780000
 GameObject:
   m_ObjectHideFlags: 0
