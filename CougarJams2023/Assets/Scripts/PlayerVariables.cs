@@ -7,7 +7,7 @@ public class PlayerVariables : MonoBehaviour
 {
     public void PlayAgain()
     {
-        SceneManager.LoadScene("ScrollingLevel");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
     }
     public void MainMenu()

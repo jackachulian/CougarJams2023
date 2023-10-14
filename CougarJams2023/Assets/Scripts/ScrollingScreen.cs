@@ -1,13 +1,28 @@
+using System.Collections;
 using UnityEngine;
 
 public class ScrollingScreen : MonoBehaviour {
-    [SerializeField] public float scrollSpeed = 2f;
+    public ScrollManager scrollManager;
+    GameObject rightEdge;
+    public GameObject player;
 
     void Start() {
         Time.timeScale = 1;
+        rightEdge = gameObject;
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other == player.GetComponent<Collider2D>())
+        {
+            scrollManager.isScrolling = true;
+            StartCoroutine(StartupTimer());      
+        }
+            
     }
 
-    void Update() {
-        transform.position = transform.position + Vector3.right * scrollSpeed * Time.deltaTime;
+    private IEnumerator StartupTimer()
+    {
+        yield return new WaitForSecondsRealtime(2f);
+        rightEdge.AddComponent<ScreenEdge>();
     }
 }
