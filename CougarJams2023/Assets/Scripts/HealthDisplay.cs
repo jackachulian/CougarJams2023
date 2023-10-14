@@ -17,7 +17,7 @@ public class HealthDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (!playerHealth) playerHealth = FindFirstObjectByType<PlayerHealth>();
     }
 
     // Update is called once per frame
