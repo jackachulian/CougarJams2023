@@ -14,11 +14,8 @@ public class PlayerHealth : MonoBehaviour
 
     private IEnumerator ImmunityTimer()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(0.5f);
-            isImmune = false;
-        }
+        yield return new WaitForSeconds(1f);
+        isImmune = false;
     }
 
     // Start is called before the first frame update
@@ -32,9 +29,10 @@ public class PlayerHealth : MonoBehaviour
         if (!isImmune)
         {
             health -= amount;
+            isImmune = true;
+            StartCoroutine(ImmunityTimer());
         }
-        isImmune = true;
-        StartCoroutine(ImmunityTimer());
+        
         //currTimer = 0f;
         if (health <= 0)
         {

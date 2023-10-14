@@ -5,6 +5,5 @@ public class ScreenEdge : MonoBehaviour {
         if (other.gameObject.name != "Player") return;
         PlayerHealth health = FindFirstObjectByType<PlayerHealth>();
         Time.timeScale = 0;
-        health.TakeDamage(999);
     }
 }
