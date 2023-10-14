@@ -7,6 +7,7 @@ public class CharacterFollow : MonoBehaviour
     public Transform player;
     public float minX;
     public float maxX;
+
     // Update is called once per frame
     void Update()
     {
