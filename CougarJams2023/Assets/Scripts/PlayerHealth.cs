@@ -13,12 +13,9 @@ public class PlayerHealth : MonoBehaviour
     bool isImmune = false;
 
     private IEnumerator ImmunityTimer()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(0.5f);
-            isImmune = false;
-        }
+    { 
+        yield return new WaitForSeconds(1f);
+        isImmune = false;
     }
 
     // Start is called before the first frame update

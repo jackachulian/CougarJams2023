@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ScreenEdge : MonoBehaviour {
@@ -5,6 +6,9 @@ public class ScreenEdge : MonoBehaviour {
         if (other.gameObject.name != "Player") return;
         PlayerHealth health = FindFirstObjectByType<PlayerHealth>();
         Time.timeScale = 0;
-        health.TakeDamage(999);
+        while (health.health != 0)
+        {
+            health.health -= 1;
+        }
     }
 }
