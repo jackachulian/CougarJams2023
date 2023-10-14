@@ -12,6 +12,8 @@ public class PlayerHealth : MonoBehaviour
     //float immunityTimer = 1f;
     bool isImmune = false;
 
+    public GameObject GameOver;
+
     private IEnumerator ImmunityTimer()
     {
         yield return new WaitForSeconds(1f);
@@ -36,7 +38,8 @@ public class PlayerHealth : MonoBehaviour
         //currTimer = 0f;
         if (health <= 0)
         {
-            SceneManager.LoadScene("ScrollingLevel");
+            Time.timeScale = 0;
+            GameOver.SetActive(true);
             // TODO: Strengthen Player
             sanity++;
         }
