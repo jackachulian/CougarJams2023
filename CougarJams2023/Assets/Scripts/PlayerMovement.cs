@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private LayerMask groundLayerMask;
 
+    [SerializeField] private Animator animator;
+
     private Rigidbody2D rb;
 
 
@@ -37,13 +39,16 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(forwardsSpeed, rb.velocity.y);
             facing = Vector2.right;
+            animator.SetBool("running", true);
         } else if (horizontalMovement < 0) {
             rb.velocity = new Vector2(-backwardsSpeed, rb.velocity.y);
             // uncomment below to face backwards, disabled it cause doesnt fit well in sidescroller
             // facing = Vector2.left; 
+            animator.SetBool("running", false);
         } else {
             rb.velocity = new Vector2(0, rb.velocity.y);
             facing = Vector2.right;
+            animator.SetBool("running", false);
         }
 
 
@@ -57,5 +62,6 @@ public class PlayerMovement : MonoBehaviour
         // after calculations, set to false, will be set by collisions if true
         RaycastHit2D hit = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.2f, groundLayerMask);
         isGrounded = hit.collider != null;
+        animator.SetBool("isGrounded", isGrounded);
     }
 }
