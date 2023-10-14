@@ -14,6 +14,8 @@ public class EnemyMovement : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    [SerializeField] private Animator animator;
+
 
     // private bool isGrounded;
 
@@ -28,7 +30,11 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // todo: give them a melee attack at close range, don't start moving towards player until close, etc
+
         rb.velocity = new Vector2(speed, rb.velocity.y);
+
+        animator.SetBool("running", true);
 
 
         // bool jumpInput = Input.GetButtonDown("Jump");
