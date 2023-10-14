@@ -9,7 +9,7 @@ public class ScreenEdge : MonoBehaviour {
 
     private void Awake()
     {
-        GameOver = GameObject.Find("GameOver");
+        if (!GameOver) GameOver = GameObject.Find("GameOver");
         //print(GameOver.name + " is now found.");
     }
 
