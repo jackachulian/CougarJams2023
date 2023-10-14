@@ -2,19 +2,37 @@ using System.Collections;
 using UnityEngine;
 
 public class ScrollingScreen : MonoBehaviour {
+    public bool isFlipped;
     public ScrollManager scrollManager;
     GameObject rightEdge;
+    GameObject leftEdge;
     public GameObject player;
 
     void Start() {
         Time.timeScale = 1;
-        rightEdge = gameObject;
+        if (!isFlipped)
+        {
+            rightEdge = gameObject;
+        } else
+        {
+            leftEdge = gameObject;
+        }
 
         if (!player) player = GameObject.Find("Player");
     }
     void Update()
     {
-        transform.position = transform.position + Vector3.right * 2 * Time.deltaTime;
+        if (scrollManager.isScrolling)
+        {
+            if (!isFlipped)
+            {
+                transform.position = transform.position + Vector3.right * 2 * Time.deltaTime;
+            }
+            else
+            {
+                transform.position = transform.position + Vector3.left * 2 * Time.deltaTime;
+            }
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,7 +41,6 @@ public class ScrollingScreen : MonoBehaviour {
             scrollManager.isScrolling = true;
             StartCoroutine(StartupTimer());      
         }
-            
     }
 
     private IEnumerator StartupTimer()

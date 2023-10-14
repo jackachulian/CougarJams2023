@@ -21,11 +21,15 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isGrounded;
 
-    [HideInInspector] public Vector2 facing = Vector2.right;
+    [HideInInspector] public Vector2 facing;
 
     // Start is called before the first frame update
     void Start()
     {
+        /*if ()
+        {
+
+        }*/
         rb = GetComponent<Rigidbody2D>();
         facing = Vector2.right;
     }
