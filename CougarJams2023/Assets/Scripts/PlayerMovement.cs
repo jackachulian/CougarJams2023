@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    public ScrollingScreen scrollingScreen;
 
     private bool isGrounded;
 
@@ -26,12 +28,15 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*if ()
-        {
+        rb = gameObject.GetComponent<Rigidbody2D>();
 
-        }*/
-        rb = GetComponent<Rigidbody2D>();
-        facing = Vector2.right;
+        if (scrollingScreen.isFlipped)
+        {
+            facing = Vector2.left;
+        } else
+        {
+            facing = Vector2.right;
+        }
     }
 
     // Update is called once per frame
@@ -48,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         } else if (horizontalMovement < 0) {
             rb.velocity = new Vector2(-backwardsSpeed, rb.velocity.y);
             // uncomment below to face backwards, disabled it cause doesnt fit well in sidescroller
-            // facing = Vector2.left; 
+            facing = Vector2.left; 
             animator.SetBool("running", true);
         } else {
             rb.velocity = new Vector2(0, rb.velocity.y);

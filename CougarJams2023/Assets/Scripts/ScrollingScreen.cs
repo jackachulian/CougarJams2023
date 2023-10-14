@@ -48,6 +48,13 @@ public class ScrollingScreen : MonoBehaviour {
     private IEnumerator StartupTimer()
     {
         yield return new WaitForSecondsRealtime(2f);
-        rightEdge.AddComponent<ScreenEdge>();
+        if (!isFlipped)
+        {
+            rightEdge.AddComponent<ScreenEdge>();
+        } else
+        {
+            leftEdge.AddComponent<ScreenEdge>();
+        }
+        
     }
 }

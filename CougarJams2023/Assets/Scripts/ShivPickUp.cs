@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShivPickUp : MonoBehaviour
 {
     public PlayerAttack playerAttack;
+    public GameObject model;
 
     private void Start() {
         if (!playerAttack) playerAttack = FindFirstObjectByType<PlayerAttack>();
@@ -22,6 +23,7 @@ public class ShivPickUp : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(0.5f);
         playerAttack.enabled = true;
+        model.SetActive(false);
         gameObject.SetActive(false);
     }
 }
