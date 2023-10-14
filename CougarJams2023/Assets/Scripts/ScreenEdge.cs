@@ -2,6 +2,8 @@ using System.Collections;
 using UnityEngine;
 
 public class ScreenEdge : MonoBehaviour {
+    //[SerializeField] private float healthCooldown = 0.5f;
+
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.name != "Player") return;
         PlayerHealth health = FindFirstObjectByType<PlayerHealth>();
@@ -12,8 +14,10 @@ public class ScreenEdge : MonoBehaviour {
     {
         while (health.health != 0)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSecondsRealtime(0.5f);
             health.health -= 1;
         }
     }
+
+
 }
