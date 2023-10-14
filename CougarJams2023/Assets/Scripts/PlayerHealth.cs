@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
     bool isImmune = false;
 
     private IEnumerator ImmunityTimer()
-    { 
+    {
         yield return new WaitForSeconds(1f);
         isImmune = false;
     }
@@ -29,9 +29,10 @@ public class PlayerHealth : MonoBehaviour
         if (!isImmune)
         {
             health -= amount;
+            isImmune = true;
+            StartCoroutine(ImmunityTimer());
         }
-        isImmune = true;
-        StartCoroutine(ImmunityTimer());
+        
         //currTimer = 0f;
         if (health <= 0)
         {
