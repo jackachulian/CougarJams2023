@@ -18,6 +18,8 @@ public class ScrollingScreen : MonoBehaviour {
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (!gameObject.activeSelf) return;
+        if (!player) return;
         if (other == player.GetComponent<Collider2D>())
         {
             scrollManager.isScrolling = true;
