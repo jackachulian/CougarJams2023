@@ -684,6 +684,7 @@ GameObject:
   - component: {fileID: 514643603}
   - component: {fileID: 514643604}
   - component: {fileID: 514643601}
+  - component: {fileID: 514643605}
   m_Layer: 0
   m_Name: ScrollingScreen
   m_TagString: MainCamera
@@ -732,6 +733,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollManager: {fileID: 0}
   player: {fileID: 0}
+--- !u!114 &514643605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514643600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a74ae99b9f52c34dbd2984ba306ff33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollSpeed: 2
+  isScrolling: 1
+  cameraOgj: {fileID: 637894741}
+  leftEdge: {fileID: 1589851457}
+  rightEdge: {fileID: 1320632549}
 --- !u!1001 &597382180
 PrefabInstance:
   m_ObjectHideFlags: 0
