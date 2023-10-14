@@ -8,6 +8,18 @@ public class PlayerHealth : MonoBehaviour
     public int health;
     public int maxHealth = 5;
     public int sanity;
+    //float currTimer = 0f;
+    //float immunityTimer = 1f;
+    bool isImmune = false;
+
+    private IEnumerator ImmunityTimer()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(0.5f);
+            isImmune = false;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -17,12 +29,19 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        health -= amount;
+        if (!isImmune)
+        {
+            health -= amount;
+        }
+        isImmune = true;
+        StartCoroutine(ImmunityTimer());
+        //currTimer = 0f;
         if (health <= 0)
         {
             SceneManager.LoadScene("ScrollingLevel");
             // TODO: Strengthen Player
             sanity++;
         }
+
     }
 }
