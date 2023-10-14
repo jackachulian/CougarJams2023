@@ -17,15 +17,9 @@ public class ScreenEdge : MonoBehaviour {
             ScrollingScreen begin = FindFirstObjectByType<ScrollingScreen>();
             if (other.gameObject.name != "Player") return;
             PlayerHealth health = FindFirstObjectByType<PlayerHealth>();
-            if (begin)
-            {
-                Time.timeScale = 0;
-                StartCoroutine(HealthTimer(health));
-                GameOver.SetActive(true);
-            }
             Time.timeScale = 0;
             StartCoroutine(HealthTimer(health));
-            GameOver.GetComponent<Canvas>().enabled = true;
+            GameOver.SetActive(true);
         
     }
     private IEnumerator HealthTimer(PlayerHealth health)
