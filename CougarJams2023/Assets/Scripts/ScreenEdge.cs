@@ -15,11 +15,15 @@ public class ScreenEdge : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        ScrollingScreen begin = FindFirstObjectByType<ScrollingScreen>();
         if (other.gameObject.name != "Player") return;
         PlayerHealth health = FindFirstObjectByType<PlayerHealth>();
-        Time.timeScale = 0;
-        StartCoroutine(HealthTimer(health));
-        GameOver.SetActive(true);
+        if (begin)
+        {
+            Time.timeScale = 0;
+            StartCoroutine(HealthTimer(health));
+            GameOver.SetActive(true);
+        }
     }
     private IEnumerator HealthTimer(PlayerHealth health)
     {
